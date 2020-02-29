@@ -1,3 +1,30 @@
+$colorPrimary: #313847;
+$colorPrimaryDark: #242A36;
+$colorAccent: #7289DA;
+$colorAccentDark: rgb(87, 104, 167);
+$colorFontPrimary: #F1F1F1;
+
+@font-face {
+    src: url(../fonts/poppins/Poppins-Light.ttf);
+    font-family: 'Poppins';
+    font-weight: 300;
+}
+@font-face {
+    src: url(../fonts/poppins/Poppins-Medium.ttf);
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+@font-face {
+    src: url(../fonts/poppins/Poppins-SemiBold.ttf);
+    font-family: 'Poppins';
+    font-weight: 700;
+}
+@font-face {
+    src: url(../fonts/poppins/Poppins-Bold.ttf);
+    font-family: 'Poppins';
+    font-weight: 800;
+}
+
 /*
 []=======================[]
          GENERAL
@@ -8,4 +35,139 @@
     padding: 0 auto;
     font-size: 1em;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+    background-color: $colorPrimaryDark;
+}
+
+#wrapper {
+    height: 100%;
+}
+
+/*
+[]=======================[]
+       TABLE LAYOUT
+[]=======================[]    
+*/
+.layout_table {
+    display: table;
+    width: 100%;
+}
+.layout_col {
+    display: table-cell;
+    vertical-align: top;
+
+    &#sidebar {
+        width: 350px;
+    }
+}
+
+/*
+[]=======================[]
+         Sidebar
+[]=======================[]    
+*/
+#sidebar {
+    background-color: $colorPrimary;
+    color: $colorFontPrimary;
+
+    transition: all 0.5s ease;
+
+    &.login {
+        width: 500px;
+        text-align: center;
+    }
+
+    &.cover {
+        width: 100%;
+    }
+}
+
+/*
+[]=======================[]
+         Headlines
+[]=======================[]    
+*/
+.sidebar_title {
+    position: relative;
+    font-size: 1.2em;
+    padding-left: 100px;
+
+    margin-top: 5em;
+    margin-bottom: 5em;
+
+    text-align: left;
+
+    h1 {
+        font-weight: 300;
+        font-size: 2.5em;
+        line-height: 1em;
+    }
+
+    span {
+        font-weight: 700;
+    }
+
+    &::before {
+        position: absolute;
+        display: inline-block;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-color: $colorAccent;
+
+        width: 80px;
+        height: 100%;
+
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+    }
+}
+
+
+/*
+[]=======================[]
+         Buttons
+[]=======================[]    
+*/
+.btn {
+    border: none;
+    background: none;
+    padding: 1em 2em 1em 2em;
+    font-size: 0.85em;
+    font-weight: 700;
+    color: $colorFontPrimary;
+    cursor: pointer;
+    outline: none;
+
+    transition: all 0.1s ease;
+    border-radius: 8px;
+
+    i {
+        margin-right: 0.5em;
+        vertical-align: middle;
+    }
+}
+.btn.btn-primary {
+    background-color: $colorAccent;
+
+    &:hover {
+        background-color: $colorAccentDark;
+    }
+    &:active {
+        transform: scale(0.98);
+    }
+}
+.btn .btn-spin {
+    margin-left: 0.5em;
+
+    &.hidden {
+        display: none;
+    }
 }

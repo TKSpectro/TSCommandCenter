@@ -10,8 +10,6 @@ if(Input::get('error')) {
         User::getInstance()->login($code, $redirectURL);
     }
 }
-
-if(User::getInstance()->isLoggedIn()) {
 ?>
 
 <script>
@@ -23,7 +21,3 @@ if(User::getInstance()->isLoggedIn()) {
         }
     });
 </script>
-
-<?
-}
-?>

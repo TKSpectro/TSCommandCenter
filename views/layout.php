@@ -7,14 +7,15 @@
     <title><?= $title ?></title>
     <style>
     </style>
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
 <header>
     <? include __DIR__ . '/shared/header.php'; ?>
 </header>
+<!-- include sidenav -->
 <?= $body; ?>
 <footer>
-    <? include __DIR__ . '/shared/footer.php'; ?>
 </footer>
 </body>
 </html>

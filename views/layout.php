@@ -9,6 +9,14 @@
     <link href="<?php echo APP_URL; ?>assets/css/style.min.css" rel="stylesheet" />
     <link href="<?php echo APP_URL; ?>assets/fonts/fontawesome-5.12.1/css/all.min.css" rel="stylesheet" />
 
+    <?php
+    if(isset($_GET['a'])) {
+        if($_GET['a'] === 'error404') {
+            echo '<link href="'.APP_URL.'assets/css/errors.min.css" rel="stylesheet" />';
+        }
+    }
+    ?>
+
     <script src="assets/js/jquery-3.4.1.min.js"></script>
 </head>
 <body>

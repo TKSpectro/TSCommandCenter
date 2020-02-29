@@ -36,6 +36,7 @@ $colorFontPrimary: #F1F1F1;
     font-size: 1em;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    color: $colorFontPrimary;
 }
 
 html, body {
@@ -47,6 +48,11 @@ html, body {
 
 #wrapper {
     height: 100%;
+}
+#content {
+    position: relative;
+    height: 100%;
+    border: 1px solid transparent;
 }
 
 /*
@@ -128,6 +134,11 @@ html, body {
         border-top-right-radius: 18px;
         border-bottom-right-radius: 18px;
     }
+}
+
+h1 {
+    font-size: 4em;
+    font-weight: 800;
 }
 
 

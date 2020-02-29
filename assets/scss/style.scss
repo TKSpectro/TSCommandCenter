@@ -1,8 +1,4 @@
-$colorPrimary: #313847;
-$colorPrimaryDark: #242A36;
-$colorAccent: #7289DA;
-$colorAccentDark: rgb(87, 104, 167);
-$colorFontPrimary: #F1F1F1;
+@import 'colors';
 
 @font-face {
     src: url(../fonts/poppins/Poppins-Light.ttf);

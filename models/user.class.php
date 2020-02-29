@@ -14,6 +14,8 @@ class User {
     }
 
     public function login(string $code) {
+        var_dump($code);
+
         $token = Discord::request(Config::get("token_url"), array(
             "grant_type" => "authorization_code",
             'client_id' => Config::get("discord_client_id"),

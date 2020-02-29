@@ -1,5 +1,4 @@
 <?php
-
 namespace app\controller;
 
 class PagesController extends \app\core\Controller
@@ -8,6 +7,11 @@ class PagesController extends \app\core\Controller
     {
         $this->_params['title'] = 'Startseite';
         $this->_params['Header'] = true;
+    }
+
+    public function actionLogin()
+    {
+        $this->_params['title'] = 'Login';
     }
 
     public function actionError404()

@@ -12,9 +12,14 @@ class Discord {
         }
       
         $headers[] = 'Accept: application/json';
-        
+
+        if(Cookie::get(Config::get('cookie_name_disc_accessToken'))) {
+            $headers[] = 'Authorization: Bearer ' . Cookie::get(Config::get('cookie_name_disc_accessToken'));
+        }
+
+        /*
         if(session('access_token'))
-          $headers[] = 'Authorization: Bearer ' . session('access_token');
+          $headers[] = 'Authorization: Bearer ' . session('access_token');*/
       
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
       

@@ -9,10 +9,7 @@ $actionName = $_GET['a'] ?? 'index';
 
 $controllerPath = __DIR__ . '/controller/' . $controllerName . 'Controller.php';
 
-// Setup path, url and query of request
-define('APP_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
-define('APP_URL', str_replace($_SERVER['DOCUMENT_ROOT'], '', $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER['HTTP_HOST'] . (dirname($_SERVER['PHP_SELF']) === DIRECTORY_SEPARATOR ? '' : dirname($_SERVER['PHP_SELF'])) . '/'));
-define('APP_QUERY', $_SERVER['QUERY_STRING']);
+
 
 if (file_exists($controllerPath)) {
     require_once $controllerPath;

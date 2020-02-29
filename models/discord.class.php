@@ -15,11 +15,9 @@ class Discord {
 
         if(Cookie::get(Config::get('cookie_name_disc_accessToken'))) {
             $headers[] = 'Authorization: Bearer ' . Cookie::get(Config::get('cookie_name_disc_accessToken'));
+        } else if(Session::get(Config::get('cookie_name_disc_accessToken'))) {
+          $headers[] = 'Authorization: Bearer ' . Session::get(Config::get('cookie_name_disc_accessToken'));
         }
-
-        /*
-        if(session('access_token'))
-          $headers[] = 'Authorization: Bearer ' . session('access_token');*/
       
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
       

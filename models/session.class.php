@@ -9,7 +9,8 @@ class Session {
     }
 
     public static function get($name) {
-        return $_SESSION[$name];
+        if(isset($_SESSION[$name])) return $_SESSION[$name];
+        return null;
     }
 
     public static function delete($name) {

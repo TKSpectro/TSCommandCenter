@@ -5,7 +5,6 @@ if(Input::get('error')) {
     $redirectURL = APP_URL.'?c=oauth&a=oauthResult';
 
     $code = Input::get('code');
-    var_dump($code);
     if($code) {
         User::getInstance()->login($code, $redirectURL);
     }

@@ -2,6 +2,7 @@
 session_start();
 
 require_once 'init/00_init.php';
+require_once 'init/10_serverconfigs.php';
 
 $controllerName = $_GET['c'] ?? 'pages';
 $actionName = $_GET['a'] ?? 'index';

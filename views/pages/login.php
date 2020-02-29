@@ -1,10 +1,9 @@
 <?
 if(!User::getInstance()->isLoggedIn()){
-
-?>
-    <button class="btn btn-primary" id="btn_login"><i class="fab fa-discord"></i> Mit Discord anmelden <i class="btn-spin hidden fas fa-spinner fa-spin"></i></button>
-<?} else {
-    echo 'Logged in!';
+    echo '<button class="btn btn-primary" id="btn_login"><i class="fab fa-discord"></i> Mit Discord anmelden <i class="btn-spin hidden fas fa-spinner fa-spin"></i></button>';
+} else {
+    header('Location: '.APP_URL);
+    die();
 }
 ?>
 

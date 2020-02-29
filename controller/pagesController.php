@@ -14,6 +14,11 @@ class PagesController extends \app\core\Controller
         $this->_params['title'] = 'Login';
     }
 
+    public function actionLogout()
+    {
+        $this->_params['title'] = 'Logout';
+    }
+
     public function actionError404()
     {
         $this->_params['title'] = 'Error404';

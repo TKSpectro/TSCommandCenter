@@ -2,15 +2,17 @@
 if(Input::get('error')) {
     // Login failed or has been cancelled by user
 } else {
+    $redirectURL = APP_URL.'?c=oauth&a=oauthResult';
 
     $code = Input::get('code');
-    //Session::put(, $code);
-    User::getInstance()->login($code);
-
+    var_dump($code);
+    if($code) {
+        User::getInstance()->login($code, $redirectURL);
+    }
 }
+
+if(User::getInstance()->isLoggedIn()) {
 ?>
-
-
 
 <script>
     $(window).on('load', function(){
@@ -21,3 +23,7 @@ if(Input::get('error')) {
         }
     });
 </script>
+
+<?
+}
+?>

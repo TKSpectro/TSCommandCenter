@@ -13,24 +13,30 @@ class User {
         
     }
 
-    public function login(string $code) {
+    public function login(string $code, string $redirectURL) {
         var_dump($code);
+        var_dump($redirectURL);
 
         $token = Discord::request(Config::get("token_url"), array(
             "grant_type" => "authorization_code",
             'client_id' => Config::get("discord_client_id"),
             'client_secret' => Config::get("discord_client_secret"),
-            'redirect_uri' => Config::get("redirect_url"),
+            'redirect_uri' => $redirectURL,
             'code' => $code
         ));
 
-        $accessToken = $token->access_token;
-        $expiry = $token->expires_in;       // 7 days
+        var_dump($token);
 
-        // Write accesstoken as user cookie with matching expiry
-        Cookie::put(Config::get("cookie_name_disc_accessToken"), $accessToken, $expiry);
+        // Only login if access token has been returned
+        if(property_exists($token, 'access_token')) {
+            $accessToken = $token->access_token;
+            $expiry = $token->expires_in;       // 7 days
 
-        $this->_loggedIn = true;
+            // Write accesstoken as user cookie with matching expiry
+            Cookie::put(Config::get("cookie_name_disc_accessToken"), $accessToken, $expiry);
+
+            $this->_loggedIn = true;
+        }
     }
 
     public function isLoggedIn(){

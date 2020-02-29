@@ -12,7 +12,7 @@ if(!User::getInstance()->isLoggedIn()){
         var loginWin = window.open('<?php echo APP_URL; ?>?c=oauth&a=oauthLogin', 'Login through Discord', params, true);
 
         window.addEventListener('message', function(e) {
-            alert(e.data);
+            // Update Login page
         });
 
     });

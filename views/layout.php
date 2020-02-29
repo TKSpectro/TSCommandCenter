@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= $title ?></title>
-    
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96clear.png">
     <link href="<?php echo APP_URL; ?>assets/css/style.min.css" rel="stylesheet" />
     <link href="<?php echo APP_URL; ?>assets/fonts/fontawesome-5.12.1/css/all.min.css" rel="stylesheet" />
 

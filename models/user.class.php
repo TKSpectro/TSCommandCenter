@@ -92,10 +92,13 @@ class User {
     }
 
     public function hasPermission(string $permission) {
+        // Deny permissions if removed or not on whitelist
         if(!$this->isWhitelisted()) {
             $this->logout();
             return false;
         }
+
+        
 
         return true;
     }

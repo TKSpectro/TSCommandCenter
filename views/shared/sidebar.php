@@ -8,6 +8,13 @@
                     </div>';
             echo '<img src="'.APP_URL.'assets/images/favicon-96x96clear.png" style="display: block; border-radius: 50%; margin-bottom: 5em;" height="256px" />';
             echo $body;
-        }
+        } else {
+            // Add HTML below
     ?>
+
+<a href="index.php?c=pages&a=logout">Abmelden</a>
+
+<?php 
+}
+?>
 </div>

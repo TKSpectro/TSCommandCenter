@@ -24,4 +24,9 @@ class PagesController extends \app\core\Controller
         $this->_params['title'] = 'Not Found';
         $this->_params['Header'] = true;
     }
+
+    public function actionFilebrowser()
+    {
+        $this->_params['title'] = 'Dateibrowser';
+    }
 }

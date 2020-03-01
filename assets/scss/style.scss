@@ -63,31 +63,6 @@ html, body {
 .layout_col {
     display: table-cell;
     vertical-align: top;
-
-    &#sidebar {
-        width: 350px;
-    }
-}
-
-/*
-[]=======================[]
-         Sidebar
-[]=======================[]    
-*/
-#sidebar {
-    background-color: $colorPrimary;
-    color: $colorFontPrimary;
-
-    transition: all 0.5s ease;
-
-    &.login {
-        width: 500px;
-        text-align: center;
-    }
-
-    &.cover {
-        width: 100%;
-    }
 }
 
 /*
@@ -134,7 +109,29 @@ html, body {
 
 h1 {
     font-size: 4em;
+}
+h2 {
+    font-size: 3em;
+}
+h3 {
+    font-size: 2.5em;
+}
+h4 {
+    font-size: 2.0em;
+}
+h5 {
+    font-size: 1.5em;
+}
+h6 {
+    font-size: 1em;
+}
+
+h1,h2,h3,h4,h5,h6 {
     font-weight: 800;
+
+    &.light {
+        font-weight: 300;
+    }
 }
 
 

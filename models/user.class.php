@@ -91,6 +91,12 @@ class User {
         return self::$_instance;
     }
 
+    public function getAvatarURL(string $redirectURL = '', int $size = 128){
+        //$url = 'https://cdn.discordapp.com/avatars/336826908769779712/35b42b92cad9c5dbdb36d063d53ec671.png?size='.$size;
+        $url = 'https://cdn.discordapp.com/avatars/'.$this->_data->id.'/'.$this->_data->avatar.'.png?size='.$size;
+        return $url;
+    }
+
     public function hasPermission(string $permission) {
         // Deny permissions if removed or not on whitelist
         if(!$this->isWhitelisted()) {

@@ -40,7 +40,7 @@
         </ul>
         <ul class="nav_category">
             <li class="nav_label">CS:GO Server</li>
-            <li class="not_available"><a href="index.php?c=pages&a=na"><i class="fas fa-terminal"></i>Konsole</a></li>
+            <li class="<?php echo ($currentPage == 'servercsgo' ? 'active' : ''); ?>"><a href="index.php?c=servercsgo&a=servercsgo"><i class="fas fa-terminal"></i>Konsole</a></li>
         </ul>
         <ul class="nav_category">
             <li class="nav_label">Minecraft Server</li>

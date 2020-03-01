@@ -49,9 +49,6 @@
             <li class="not_available"><a href="index.php?c=pages&a=na"><i class="fas fa-cogs"></i>Einstellungen</a></li>
         </ul>
     </div>
-
-<a href="index.php?c=pages&a=logout">Abmelden</a>
-
 <?php 
 }
 ?>

@@ -8,10 +8,10 @@ if (!User::getInstance()->isLoggedIn())
 Server command to execute:
 <form method='POST'>
     <input type='text' name='minecraftCommand'/>
-    <input type='submit'/>
+    <button class="btn btn-primary btn-small" type="submit">Absenden</button>
 </form>
 
-<h1>Server Log</h1>
+<h4>Server Log</h4>
 <form method="post">
     <input type="submit" name="minecraftRefresh" value="Refresh Log"/>
 </form>

@@ -6,7 +6,7 @@ class servercsgoController extends \app\core\Controller
     public function actionServercsgo()
     {
         include 'init/10_serverconfigs.php';
-        $this->_params['title'] = 'CSGO-Server';
+        $this->_params['title'] = 'CS:GO Konsole';
 
         if (isset($_POST["csgoCommand"]))
         {

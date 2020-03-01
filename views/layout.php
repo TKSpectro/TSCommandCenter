@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><?= $title ?></title>
+    <title>TS Webinterface :: <?= $title ?></title>
 
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon-96x96clear.png">
 
@@ -28,20 +28,21 @@
         <? include __DIR__ . '/shared/sidebar.php'; ?>
 
         <div id="content" class="layout_col">
-            <? include __DIR__ . '/shared/header.php'; ?>
+            <? if(User::getInstance()->isLoggedIn()){
+                include __DIR__ . '/shared/header.php'; ?>
+
+                <div class="content-container">
+                    <h3><?= $title ?></h3>
+                    <?php
+                        // Show page content in content section only if logged in
+                        echo $body;
+                    ?>
+                </div>
 
             <?php
-                // Show page content in content section only if logged in
-                if(User::getInstance()->isLoggedIn()) {
-                    echo $body;
-                }
+            }
             ?>
         </div>
-
-        <!-- Header should be besides sidebar and on top -->
-        
-
-        
     </div>
 </body>
 </html>

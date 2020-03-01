@@ -1,0 +1,26 @@
+@import 'colors';
+
+.browser_path {
+    background-color: $colorAccent;
+}
+
+.browser_content {
+    table {
+        width: 100%;
+
+        th {
+            text-align: left;
+        }
+
+        tr {
+            #col_icon {
+                width: 32px;
+                text-align: center;
+            }
+        }
+
+        td.col_icon {
+            text-align: center;
+        }
+    }
+}

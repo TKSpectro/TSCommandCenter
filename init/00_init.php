@@ -2,6 +2,7 @@
 
 require_once 'core/controller.php';
 require_once 'controller/oauthController.php';
+require_once 'controller/filebrowserController.php';
 require_once 'controller/servercsgoController.php';
 require_once 'controller/serverminecraftController.php';
 //include controllers

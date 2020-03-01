@@ -8,5 +8,5 @@ if (!User::getInstance()->isLoggedIn())
 Server command to execute:
 <form method='POST'>
     <input type='text' name='csgoCommand'/>
-    <input type='submit'/>
+    <button class="btn btn-primary btn-small" type="submit">Absenden</button>
 </form>

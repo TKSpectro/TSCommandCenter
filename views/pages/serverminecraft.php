@@ -13,5 +13,5 @@ Server command to execute:
 
 <h4>Server Log</h4>
 <form method="post">
-    <input type="submit" name="minecraftRefresh" value="Refresh Log"/>
+    <button class="btn btn-primary btn-small" name="minecraftRefresh" type="submit">Aktualisieren</button>
 </form>

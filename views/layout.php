@@ -10,6 +10,7 @@
 
     <link href="<?php echo APP_URL; ?>assets/css/style.min.css" rel="stylesheet" />
     <link href="<?php echo APP_URL; ?>assets/css/sidebar.min.css" rel="stylesheet" />
+    <link href="<?php echo APP_URL; ?>assets/css/header.min.css" rel="stylesheet" />
     <link href="<?php echo APP_URL; ?>assets/fonts/fontawesome-5.12.1/css/all.min.css" rel="stylesheet" />
 
     <?php
@@ -26,12 +27,9 @@
     <div id="wrapper" class="layout_table">
         <? include __DIR__ . '/shared/sidebar.php'; ?>
 
-        <!-- Header should be besides sidebar and on top -->
-        <header>
-            <? include __DIR__ . '/shared/header.php'; ?>
-        </header>
-
         <div id="content" class="layout_col">
+            <? include __DIR__ . '/shared/header.php'; ?>
+
             <?php
                 // Show page content in content section only if logged in
                 if(User::getInstance()->isLoggedIn()) {
@@ -39,6 +37,11 @@
                 }
             ?>
         </div>
+
+        <!-- Header should be besides sidebar and on top -->
+        
+
+        
     </div>
 </body>
 </html>

@@ -7,7 +7,7 @@ class serverminecraftController extends \app\core\Controller
     public function actionServerminecraft()
     {
         include 'init/10_serverconfigs.php';
-        $this->_params['title'] = 'Minecraft-Server';
+        $this->_params['title'] = 'Minecraft Konsole';
 
         if (isset($minecraftConfig))
         {

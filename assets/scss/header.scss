@@ -1,0 +1,48 @@
+@import 'colors';
+
+$height: 4em;
+
+#header {
+    position: fixed;
+    display: block;
+
+    height: $height;
+    line-height: $height;
+    z-index: 10000;
+    left: 320px;
+    right: 0;
+    top: 0;
+
+    padding-left: 2em;
+    padding-right: 2em;
+
+    background-color: $colorPrimary;
+    box-shadow: 15px 3px 6px 0px rgba(0,0,0,0.1);
+
+    overflow: hidden;
+}
+
+.nav_header {
+    list-style: none;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+        float: right;
+
+        width: $height;
+
+        border-right: 3px solid rgba($colorPrimaryDark, $alpha: 0.3);
+        text-align: center;
+        transition: all 0.1s ease;
+
+        a {
+            display: inline-block;
+            width: 100%;
+        }
+
+        &:hover {
+            background-color: $colorPrimaryDark;
+        }
+    }
+}

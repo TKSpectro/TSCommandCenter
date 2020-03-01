@@ -5,7 +5,6 @@ if (!User::getInstance()->isLoggedIn())
     die();
 }
 ?>
-<h1> Server Console </h1>
 Server command to execute:
 <form method='POST'>
     <input type='text' name='csgoCommand'/>

@@ -5,7 +5,7 @@ class PagesController extends \app\core\Controller
 {
     public function actionIndex()
     {
-        $this->_params['title'] = 'Startseite';
+        $this->_params['title'] = 'Dashboard';
         $this->_params['Header'] = true;
     }
 
@@ -21,7 +21,7 @@ class PagesController extends \app\core\Controller
 
     public function actionError404()
     {
-        $this->_params['title'] = 'Error404';
+        $this->_params['title'] = 'Not Found';
         $this->_params['Header'] = true;
     }
 }

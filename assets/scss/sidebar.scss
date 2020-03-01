@@ -102,7 +102,14 @@ $leftInset: 2.5em;
                 }
 
                 &.not_available {
-                    text-decoration: line-through;
+                    a {
+                        text-decoration: line-through !important;
+                        opacity: 0.2;
+
+                        &:hover {
+                            cursor: not-allowed;
+                        }
+                    }
                 }
 
                 a {

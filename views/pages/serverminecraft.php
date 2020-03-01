@@ -10,3 +10,8 @@ Server command to execute:
     <input type='text' name='minecraftCommand'/>
     <input type='submit'/>
 </form>
+
+<h1>Server Log</h1>
+<form method="post">
+    <input type="submit" name="minecraftRefresh" value="Refresh Log"/>
+</form>

@@ -6,6 +6,8 @@ require_once 'controller/servercsgoController.php';
 require_once 'controller/serverminecraftController.php';
 //include controllers
 
+require_once 'core/functions.php';
+
 // Setup path, url and query of request
 define('APP_PATH', dirname(__FILE__) . DIRECTORY_SEPARATOR);
 define('APP_URL', str_replace($_SERVER['DOCUMENT_ROOT'], '', $_SERVER["REQUEST_SCHEME"] . '://' . $_SERVER['HTTP_HOST'] . (dirname($_SERVER['PHP_SELF']) === DIRECTORY_SEPARATOR ? '' : dirname($_SERVER['PHP_SELF'])) . '/'));

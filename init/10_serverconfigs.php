@@ -14,13 +14,8 @@ $csgoConfig['pmax'] = 200;
 */
 /* MINECRAFT CONFIG */
 
-$minecraftConfig['serverName'] = 'My server name';                  //Name of your server
-$minecraftConfig['admin'] = 'Admins name';                          //Your name / IGN (just changes color in console for the admin name)
-$minecraftConfig['serverDir'] = 'C:\Users\tomka\Documents\GitHub\PHPWeb\server\\';                         //Directory of your Minecraft server files.
-$minecraftConfig['serverLog'] = 'logs\\latest.log';                 //location of current server log inside server dir
-$minecraftConfig['username'] = 'username';                          //Admin username (note: case sensitive)
-$minecraftConfig['password'] = 'password';                          //Admin password (note: case sensitive)
-$minecraftConfig['pmax'] = 200;
+$minecraftConfig['serverDir'] = '..\\minecraftServer\\';                         //Directory of your Minecraft server files.
+$minecraftConfig['serverLog'] = 'logs\\latest.log';                 //location of current server log inside server dir //Admin password (note: case sensitive)
 //error array for checks
 $omitarray = array	(
     'Reached end of stream for',

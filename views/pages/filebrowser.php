@@ -35,6 +35,8 @@ try {
         <?php
             if($contents) {
                 foreach($contents as $file) {
+                    var_dump($file);
+
                     $name = $file['name'];
                     $type = $file['type'];
                     $modified = $file['modify'];

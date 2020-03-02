@@ -9,8 +9,6 @@ $actionName = $_GET['a'] ?? 'index';
 
 $controllerPath = __DIR__ . '/controller/' . $controllerName . 'Controller.php';
 
-
-
 if (file_exists($controllerPath)) {
     require_once $controllerPath;
 
@@ -22,7 +20,6 @@ if (file_exists($controllerPath)) {
         if (method_exists($controllerInstance, $actionMethodName)) {
             $controllerInstance->$actionMethodName();
             $controllerInstance->renderHTML();
-
         } else {
             header('Location: index.php?c=page&a=error404');
         }

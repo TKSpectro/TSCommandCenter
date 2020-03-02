@@ -1,3 +1,9 @@
+<?php
+$controllerName = $_GET['c'] ?? 'pages';
+
+if($controllerName != 'api') {
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -49,3 +55,7 @@
     </div>
 </body>
 </html>
+
+<?
+}
+?>

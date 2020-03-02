@@ -1,4 +1,5 @@
 <?php
+
 class Discord {
     public static function request($url, $post=FALSE, $headers=array()) {
         $ch = curl_init($url);

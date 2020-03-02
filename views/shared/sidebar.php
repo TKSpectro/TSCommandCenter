@@ -35,7 +35,8 @@
         <ul class="nav_category">
             <li class="nav_label">Allgemein</li>
             <li class="<?php echo ($currentPage == 'index' ? 'active' : ''); ?>"><a href="index.php?c=pages&a=index"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
-            <li class="<?php echo ($currentPage == 'filebrowser' ? 'active' : ''); ?>"><a href="index.php?c=filebrowser&a=filebrowser"><i class="fas fa-folder-open"></i>Dateibrowser</a></li>
+            <li class="<?php echo ($currentPage == 'filebrowser' ? 'active' : ''); ?>"><a href="index.php?c=pages&a=filebrowser"><i class="fas fa-folder-open"></i>Dateibrowser</a></li>
+            <li class="<?php echo ($currentPage == 'apiBrowsefiles' ? 'active' : ''); ?>"><a href="index.php?c=api&a=apiBrowsefiles"><i class="fas fa-folder-open"></i>Dateibrowser API</a></li>
             <li class="not_available"><a href="index.php?c=pages&a=na"><i class="fas fa-photo-video"></i>Videos & Clips</a></li>
         </ul>
         <ul class="nav_category">

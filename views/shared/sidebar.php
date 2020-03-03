@@ -46,6 +46,16 @@
         <ul class="nav_category">
             <li class="nav_label">Minecraft Server</li>
             
+                <div class="select" placeholder="Server auswählen">
+                    <div class="select_wrapper">
+                        <!-- Place array here -->
+                        <div class="select_option">Option 1</div>
+                        <div class="select_option">Option 2</div>
+                        <div class="select_option">Option 3</div>
+                        <div class="select_option">Option 3</div>
+                    </div>
+                </div>
+
             <li class="<?php echo ($currentPage == 'serverminecraft' ? 'active' : ''); ?>"><a href="index.php?c=serverminecraft&a=serverminecraft&serverID=1"><i class="fas fa-terminal"></i>Konsole</a></li>
             <li class="not_available"><a href="index.php?c=pages&a=na"><i class="fas fa-cogs"></i>Einstellungen</a></li>
         </ul>

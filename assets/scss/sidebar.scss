@@ -36,6 +36,7 @@ $leftInset: 2.5em;
         margin-bottom: 2em;
         padding-left: $leftInset;
         padding-right: $leftInset;
+        text-align: left;
 
         #user_profile_picture {
             float: left;
@@ -75,6 +76,10 @@ $leftInset: 2.5em;
     }
 
     .nav_wrapper {
+        .select {
+            margin: 1em $leftInset;
+        }
+
         .nav_category {
             display: block;
             margin-top: 1.5em;
@@ -127,7 +132,7 @@ $leftInset: 2.5em;
                     color: inherit;
                 }
 
-                &:not(.nav_label):hover {
+                &:not(.nav_label):not(.noeffect):hover {
                     background-color: $colorPrimaryDark;
                     cursor: pointer;
                 }

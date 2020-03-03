@@ -53,6 +53,8 @@ if($controllerName != 'api') {
             ?>
         </div>
     </div>
+
+    <script src="<?php echo APP_URL.'assets/js/inputs.js'; ?>"></script>
 </body>
 </html>
 

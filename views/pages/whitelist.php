@@ -17,21 +17,9 @@
             ';
         }
     ?>
-    <!--<div class="grid_item whitelist_item" style="min-width: 350px">
-        <div class="grid_item_loading">
-            <div class="grid_item_loading_wrapper">
-                <i class="fas fa-spinner fa-spin fa-2x"></i>
-            </div>
-        </div>
-        <img class="whitelist_item_picture" style="float: left; margin-right: 1em" width="64px" height="64px" />
-        <div class="whitelist_item_description">
-            <h5>zettee#0899</h5>
-            <span class="whitelist_item_rank">Administrator</span>
-        </div>
-    </div>-->
 </div>
 
-<script>
+<!--<script>
     $(document).ready(function() {
 
         $('.grid_item').each(function(){
@@ -58,4 +46,4 @@
         });
     });
 
-</script>
+</script>-->

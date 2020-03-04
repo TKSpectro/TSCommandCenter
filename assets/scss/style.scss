@@ -147,10 +147,14 @@ h6 {
 
 h1,h2,h3,h4,h5,h6 {
     font-weight: 800;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
 
     &.light {
         font-weight: 300;
     }
+
+    
 }
 
 
@@ -270,5 +274,22 @@ h1,h2,h3,h4,h5,h6 {
             top: 120%;
             pointer-events: visible;
         }
+    }
+}
+
+/*
+[]=======================[]
+           Grid
+[]=======================[]    
+*/
+.grid_container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 30% [col-start]);
+    align-items: start;
+
+    .grid_item {
+        background-color: $colorDarkBackground;
+        padding: 2em;
     }
 }

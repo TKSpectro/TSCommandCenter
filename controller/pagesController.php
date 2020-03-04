@@ -29,4 +29,9 @@ class PagesController extends \app\core\Controller
     {
         $this->_params['title'] = 'Dateibrowser';
     }
+
+    public function actionWhitelist()
+    {
+        $this->_params['title'] = 'Whitelist';
+    }
 }

@@ -40,6 +40,10 @@
             <li class="not_available"><a href="index.php?c=pages&a=na"><i class="fas fa-photo-video"></i>Videos & Clips</a></li>
         </ul>
         <ul class="nav_category">
+            <li class="nav_label">Verwaltung</li>
+            <li class="<?php echo ($currentPage == 'whitelist' ? 'active' : ''); ?>"><a href="index.php?c=pages&a=whitelist"><i class="fas fa-address-book"></i>Whitelist</a></li>
+        </ul>
+        <ul class="nav_category">
             <li class="nav_label">CS:GO Server</li>
             <li class="<?php echo ($currentPage == 'servercsgo' ? 'active' : ''); ?>"><a href="index.php?c=servercsgo&a=servercsgo"><i class="fas fa-terminal"></i>Konsole</a></li>
         </ul>
@@ -48,11 +52,11 @@
             
                 <div class="select" placeholder="Server auswählen">
                     <div class="select_wrapper">
-                        <!-- Place array here -->
-                        <div class="select_option">Option 1</div>
-                        <div class="select_option">Option 2</div>
-                        <div class="select_option">Option 3</div>
-                        <div class="select_option">Option 3</div>
+                        <?php 
+                            foreach(getMinecraftServerObjectsInArray() as $server) {
+                                echo '<div class="select_option" action="JS FUNCTION HERE">'.$server->getName().' ('.$server->getVersion().')</div>';
+                            }
+                        ?>
                     </div>
                 </div>
 

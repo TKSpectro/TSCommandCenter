@@ -19,8 +19,7 @@
             data: "c=api&a=apiUpdate",
             complete: function(data) {
                 if(data.status == 200) {
-                    // 
-                    //window.location.reload();
+                    window.location.reload();
                 }
             }
         });

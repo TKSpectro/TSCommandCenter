@@ -1,2 +1,2 @@
 <?
-exec("git clone https://github.com/TKSpectro/TSCommandCenter.git master");
+exec("git clone https://github.com/TKSpectro/TSCommandCenter.git cloneTest");

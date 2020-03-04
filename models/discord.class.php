@@ -17,13 +17,33 @@ class Discord {
         if(Cookie::get(Config::get('cookie_name_disc_accessToken'))) {
             $headers[] = 'Authorization: Bearer ' . Cookie::get(Config::get('cookie_name_disc_accessToken'));
         } else if(Session::get(Config::get('cookie_name_disc_accessToken'))) {
-          $headers[] = 'Authorization: Bearer ' . Session::get(Config::get('cookie_name_disc_accessToken'));
+            $headers[] = 'Authorization: Bearer ' . Session::get(Config::get('cookie_name_disc_accessToken'));
         }
       
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
       
         $response = curl_exec($ch);
         return json_decode($response);
+      }
+
+      public static function requestAsBot($url, $post = false, $headers = array()) {
+			$ch = curl_init($url);
+			curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+		
+			$response = curl_exec($ch);
+		
+			if($post) {
+			curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($post));
+			}
+		
+			$headers[] = 'Accept: application/json';
+			$headers[] = 'Authorization: Bot NjgzMDQ3NzI4MTI5MTE0MTQx.Xl_LDg.zO3czyY2RDef4AaRGp3xGV_WyeA';
+
+			curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+		
+			$response = curl_exec($ch);
+			return json_decode($response);
       }
 }
 ?>

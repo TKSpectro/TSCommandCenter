@@ -50,21 +50,32 @@
         <ul class="nav_category">
             <li class="nav_label">Minecraft Server</li>
             
-                <div class="select" placeholder="Server auswählen">
+                <div class="select" data-value="">
+                    <p class="select_placeholder">Server auswählen</p>
                     <div class="select_wrapper">
                         <?php 
                             foreach(getMinecraftServerObjectsInArray() as $server) {
-                                echo '<div class="select_option" action="JS FUNCTION HERE">'.$server->getName().' ('.$server->getVersion().')</div>';
+                                echo '<div class="select_option" data-callback="setServer('.$server->getId().')" data-value="'.$server->getId().'">'.$server->getName().' ('.$server->getVersion().') #'.$server->getId().'</div>';
                             }
                         ?>
                     </div>
                 </div>
 
-            <li class="<?php echo ($currentPage == 'serverminecraft' ? 'active' : ''); ?>"><a href="index.php?c=serverminecraft&a=serverminecraft&serverID=1"><i class="fas fa-terminal"></i>Konsole</a></li>
-            <li class="not_available"><a href="index.php?c=pages&a=na"><i class="fas fa-cogs"></i>Einstellungen</a></li>
+            <li class="<?php echo ($currentPage == 'serverminecraft' ? 'active' : ''); ?>"><a id="linkMcConsole"><i class="fas fa-terminal"></i>Konsole</a></li>
+            <li class="not_available"><a id="linkMcSettings" ><i class="fas fa-cogs"></i>Einstellungen</a></li>
         </ul>
     </div>
 <?php 
 }
 ?>
 </div>
+
+<script>
+function setServer(id){
+    var baseConsoleURL = 'index.php?c=serverminecraft&a=serverminecraft&serverID='+id;
+    var baseSettingsURL = 'index.php?c=serverminecraft&a=serverminecraftsettings&serverID='+id;
+
+    $('#linkMcConsole').attr('href', baseConsoleURL);
+    $('#linkMcSettings').attr('href', baseSettingsURL);
+}
+</script>
